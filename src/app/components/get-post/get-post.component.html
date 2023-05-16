@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Get Post Data</h1>
+  <div class="form-container">
+    <form class="post-form" (ngSubmit)="onSubmit()" class="form-horizontal">
+      <div class="form-group">
+        <label for="postId">Post ID:</label>
+        <input
+          type="number"
+          id="postId"
+          name="postId"
+          [(ngModel)]="postId"
+          required
+          class="form-control"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Get Post</button>
+    </form>
+
+    <div *ngIf="postData" class="mt-4">
+      <h2>Post Details</h2>
+      <p><strong>ID:</strong> {{ postData.id }}</p>
+      <p><strong>User ID:</strong> {{ postData.userId }}</p>
+      <p><strong>Title:</strong> {{ postData.title }}</p>
+      <p><strong>Body:</strong> {{ postData.body }}</p>
+    </div>
+
+    <div *ngIf="!postData" class="mt-4">
+      <h3>Data not found</h3>
+    </div>
+  </div>
+</div>

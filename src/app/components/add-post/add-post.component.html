@@ -1,0 +1,90 @@
+<div class="container">
+  <h1>Create New Post</h1>
+  <div class="form-container">
+    <form
+      [formGroup]="postForm"
+      (ngSubmit)="onSubmit()"
+      class="form-horizontal"
+    >
+      <div class="form-group">
+        <label for="id">ID:</label>
+        <input
+          type="number"
+          id="id"
+          formControlName="id"
+          [value]="lastId + 1"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="userId">User ID:</label>
+        <input
+          type="number"
+          id="userId"
+          formControlName="userId"
+          class="form-control"
+        />
+        <div
+          *ngIf="
+            postForm.get('userId')?.invalid && postForm.get('userId')?.touched
+          "
+          class="text-danger"
+        >
+          UserId is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input
+          type="text"
+          id="title"
+          formControlName="title"
+          class="form-control"
+        />
+        <div
+          *ngIf="
+            postForm.get('title')?.invalid && postForm.get('title')?.touched
+          "
+          class="text-danger"
+        >
+          Title is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="body">Body:</label>
+        <input
+          type="text"
+          id="body"
+          formControlName="body"
+          class="form-control"
+        />
+        <div
+          *ngIf="postForm.get('body')?.invalid && postForm.get('body')?.touched"
+          class="text-danger"
+        >
+          Body is required
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="postForm.invalid"
+        class="btn btn-primary"
+      >
+        Add Post
+      </button>
+    </form>
+
+    <!-- Display the new post if it exists -->
+    <div *ngIf="newPost" class="mt-4">
+      <h2>Newly Created Post:</h2>
+      <p><strong>ID:</strong> {{ newPost.id }}</p>
+      <p><strong>User ID:</strong> {{ newPost.userId }}</p>
+      <p><strong>Title:</strong> {{ newPost.title }}</p>
+      <p><strong>Body:</strong> {{ newPost.body }}</p>
+    </div>
+  </div>
+</div>

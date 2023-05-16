@@ -1,0 +1,28 @@
+.about {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  font-size: 21px;
+  line-height: 1.5;
+  color: #666;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
