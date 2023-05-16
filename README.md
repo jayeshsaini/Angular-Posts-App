@@ -12,7 +12,7 @@ Posts API Get Call: `https://jsonplaceholder.typicode.com/posts`
 
 ## Implementation
 
-Angular app has the following routes: Home, New Post, Get Post and About. Home shows all the posts from the Get Posts API. New Post makes a Post call to the API. Get Post fetches a single post through GET request and passing the ID in url. Update and Delete has not been implemented because data doesn't change after the call. Bootstrap and CSS has been used for Styling.
+Angular app has the following routes: Home, New Post, Get Post and About. Home shows all the posts from the Get Posts API. New Post makes a Post call to the API. Get Post fetches a single post through GET request and passing the ID in url. Update and Delete has not been implemented because data doesn't change after the call. Using Angular Server and RxJS for API calls. Bootstrap and CSS has been used for Styling.
 
 ## Details about the API Methods:
 
