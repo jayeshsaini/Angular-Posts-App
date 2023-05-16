@@ -31,18 +31,18 @@ export class AddPostComponent {
 
   // getting the last id for ID of new post
   getLastId() {
-    this.postService.getPosts().subscribe(
-      (data) => {
+    this.postService.getPosts().subscribe({
+      next: (data) => {
         // getting the last post
         const lastPost = data[0];
         // fetching the id of the last post
         this.lastId = lastPost ? lastPost.id : 0;
         this.postForm.patchValue({ id: this.lastId + 1 });
       },
-      (error) => {
+      error: (error) => {
         console.log(error);
-      }
-    );
+      },
+    });
   }
 
   // handling the Submit for Reactive form

@@ -1,27 +1,27 @@
-# PostsApp
+# Posts App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+This app has been created by Jayesh Saini for demo pursoses. It is using the public API from JSONPlaceholder for the Posts API data.
+
+Deployed Application Link: `https://angular-posts-app.vercel.app/`
+
+## API Documentation
+
+JSONPlaceholder - Guide: `https://jsonplaceholder.typicode.com/guide/`
+
+Posts API Get Call: `https://jsonplaceholder.typicode.com/posts`
+
+## Implementation
+
+Angular app has the following routes: Home, New Post, Get Post and About. Home shows all the posts from the Get Posts API. New Post makes a Post call to the API. Get Post fetches a single post through GET request and passing the ID in url. Update and Delete has not been implemented because data doesn't change after the call. Bootstrap and CSS has been used for Styling.
+
+## Details about the API Methods:
+
+The API has all the routes for GET, POST, UPDATE & DELETE. But POST, UPDATE, & DELETE don't actually change the data. They just reflect in the API calls. Check the network calls in Developer Tools for API requests and success codes.
+
+GET call - Status code: 200
+
+POST call - Status code: 201
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
