@@ -19,6 +19,7 @@ export class PostsComponent {
       },
       error: (error) => {
         console.log(error);
+        alert('API call failed. Check the API URL again.');
       },
     });
   }
