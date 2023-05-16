@@ -16,7 +16,7 @@
       <button type="submit" class="btn btn-primary">Get Post</button>
     </form>
 
-    <div *ngIf="postData" class="mt-4">
+    <div *ngIf="dataLoaded && postData" class="mt-4">
       <h2>Post Details</h2>
       <p><strong>ID:</strong> {{ postData.id }}</p>
       <p><strong>User ID:</strong> {{ postData.userId }}</p>
@@ -24,7 +24,7 @@
       <p><strong>Body:</strong> {{ postData.body }}</p>
     </div>
 
-    <div *ngIf="!postData" class="mt-4">
+    <div *ngIf="dataLoaded && !postData" class="mt-4">
       <h3>Data not found</h3>
     </div>
   </div>
